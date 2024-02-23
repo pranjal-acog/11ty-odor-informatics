@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patent-detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <div>
+        <img src="https://odor-informatics.own5.aganitha.ai:8543/aganitha.jpg" alt="logo" class="logo">
+      </div>
+      <nav>
+        
+        <ul role="list" class="header_links">
+
+         <li>
+            <a href="/about/" >About</a>
+          </li>
+          <li>
+            <a href="/" >Patent Summary</a>
+          </li>
+          
+          <li>
+            <a href="/entity" >Entity Summary</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+      <hr class="custom-hr">
+  </div>
+</header>
+    <main>
+        
+<!-- Include ViewerJS library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+<div style="display: flex; height: 85vh; gap:3%;">
+
+    <!-- Left half containing PDF viewer -->
+    <div id="pdf-viewer-container" style="flex:1; height: 90%;">
+       <button id="fullscreen-btn"><i class="fas fa-expand-arrows-alt"></i></button>
+
+        <div id="pdf-viewer" class="pdfViewer" style=""></div>
+    </div>
+
+<!-- Right half containing patent details -->
+<div style="flex: 1;overflow: auto;margin:20px; margin-left:20px">
+    <ul style="padding: 0; margin: 0;">
+        <li style="font-size: 16px; ">
+    <a href="https://patents.google.com/patent/US20150150922A1/en" target="_blank" style="color: #8C1414;">US-2015150922-A1</a>
+</li>
+        <li style="font-size: 24px; color: #555; margin-top: 20px;">Composition for use in aromatherapy, aroma medicine and aromatology </li>
+
+        <li style="margin-top: 20px;color:#03658C;font-size:18px;">Removers
+    <ul style="padding-left: 20px; margin-top: 10px;  ">
+        
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Salvia officinalis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Lavandula stoechasL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Valeriana officinalis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Iris pallidavar.florentina</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Commiphora myrrha</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Commiphora molmol</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Osmanthus fragrans</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cedrus atlantica</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Zingiber officinalis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Matricaria camomilla</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Chamomilla recutita</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Leptospermum scoparium</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Melissa officinalisCT Citral</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Nardostachys jatamansi</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Pogostemon cablin</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Achillea millefoliumL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Vetiveria zizanoides</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Juniperus virginianaL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cananga odoratavar.genuina</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Daucus carottaL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Santalum album</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Santalum austrocaledonicum</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ocimum basilicum</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Mentha citrataL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Pelargonium graveolens</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Coriandrum sativumL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Bursera delpechiana</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Citrus aurantiumvar.amara</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cymbopogon martinii</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Mentha×piperita</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Rosa damascena</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Aniba parviflora</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Aniba rosaeodora</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Lavandula spica</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Lavandula latifolia</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Thymus vulgaris</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Thymus officinalis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Thymus vulgarisCT Thujanol-4</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Melaleuca cajeputi</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Melaleuca leucadendron</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Eucalyptus globulus</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Eucalyptus radiata</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Elettaria cardamomumL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Laurus nobilisL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Melaleuca viridiflora</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Melaleuca quinquinervia</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cinnamomum camphora</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Rosmarinus officinalis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Thymus mastichina</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Hyssopus officinalisvar.decumbens</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Lippia citriodora Kuntze</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cymbopogon flexuosus</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Litsea cubeba</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Eucalyptus citriodoria</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Angelica archangelica</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Citrus aurantiumvar.bergamia</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cistus ladaniferusL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Pseudotsuga menziesii</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Canarium luzonicumA.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Artemisia dracunculusL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Abies sibirica</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ferula galbaniflua</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Citrus paradisi</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Pinus sylvestris</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cuminum cyminumL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Pinus mugo</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Citrus aurantifolia</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Origanum majorana</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Majorana hortensis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Citrus madurensis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Citrus reticulata</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Myrtus communis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Myrtus communisCT Myrtenylacetat</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Citrus sinensis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Piper nigrum</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Abies grandisL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Rosmarinus officinalis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Melaleuca alternifolia</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Juniperus communis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Boswellia Carterii</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Citrus medica</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Citrus limonum</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cupressus sempervirens</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Thymus vulgaris</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Thymus officinalis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cinnamomum cassia</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cinnamonum aromaticum</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Syzygium aromaticum</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Eugenia caryophyllus</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ocimum sanctumL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cinnamomum ceylanicum</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Pimpinella anisum</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Foeniculum vulgarevar.dulce</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Dipteryx odorata</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Helichrysum italicumG.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Anthemis nobilis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Chamaemelum nobile</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Lavandula hybrida</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Lavandula officinalis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Lavandula vera</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Lavandula angustifolia</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Salvia sclarea</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Citrus aurantiumL. var.pumilia</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Boswellia carterii</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Betula lenta</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Vanilla planifolia</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Styrax tonkinensis</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Styrax benzoin</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Michelia champacaL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Spartium junceumL.</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Jasminum sambac</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Citrus reticulatablanco</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Gaultheria fragrantissima</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cananga odoratavar.genuina</li>
+            
+        
+    </ul>
+</li>
+
+          <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Causers
+             <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+    </ul>
+        </li>
+        
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Context
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">aromatherapy</li>
+            
+        
+    </ul>
+        </li>
+         
+         <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Substrate
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C;color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Skin</li>
+            
+        
+    </ul>
+        </li>
+        
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Efficacy
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+    </ul>
+        </li>
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">MOA
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+    </ul>
+        </li>
+    </ul>
+</div>
+
+
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        // URL of the PDF file
+        const pdfUrl = `https://odor_api.demos.aganitha.ai/pdfs/US-2015150922-A1.pdf`;
+
+        // Check if the PDF viewer container exists
+        const pdfViewerContainer = document.getElementById('pdf-viewer-container');
+
+        if (pdfViewerContainer) {
+            // Create a new <embed> element for ViewerJS
+            const embedElement = document.createElement('embed');
+            embedElement.setAttribute('src', pdfUrl);
+            embedElement.setAttribute('type', 'application/pdf');
+            embedElement.setAttribute('width', '100%');
+            embedElement.setAttribute('height', '100%'); // Set initial height to 100%
+            embedElement.style.maxHeight = '100%'; // Ensure the maximum height is 100%
+            
+            // Append the <embed> element to the PDF viewer container
+            pdfViewerContainer.appendChild(embedElement);
+        } else {
+            console.error('PDF viewer container not found.');
+        }
+    });
+
+    // Full-screen button functionality
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+    fullscreenBtn.addEventListener('click', function() {
+        toggleFullScreen();
+    });
+
+    function toggleFullScreen() {
+        const elem = document.getElementById('pdf-viewer-container');
+        if (!document.fullscreenElement) {
+            elem.requestFullscreen().catch(err => {
+                console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+            });
+            fullscreenBtn.innerHTML = '<i class="fas fa-compress-alt"></i>'; // Update button text to "Exit Full Screen"
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+            fullscreenBtn.innerHTML = '<i class="fas fa-expand-arrows-alt"></i>';; // Update button text to "Toggle Full Screen"
+        }
+    }
+
+    // Listen for full-screen change events
+    document.addEventListener('fullscreenchange', function() {
+        const elem = document.getElementById('pdf-viewer-container');
+        if (document.fullscreenElement === elem || document.webkitFullscreenElement === elem) {
+            // If in full-screen mode, set container height to 100vh
+            elem.style.height = '100vh';
+        } else {
+            // If exiting full-screen mode, reset container height to auto
+            elem.style.height = 'auto';
+        }
+    });
+</script>
+
+    </main>
+  
+    <hr class="custom-hr">
+<Footer>
+        <p >
+          Copyright © 2017-2024
+          <a
+            
+            href="https://www.aganitha.ai"
+            target="_blank"
+          style="color:#3B82F6">
+            Aganitha AI Inc.
+          </a>
+          All rights reserved.
+        </p>
+      </Footer>
+</body>
+</html>

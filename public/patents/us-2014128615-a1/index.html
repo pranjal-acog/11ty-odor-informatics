@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patent-detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <div>
+        <img src="https://odor-informatics.own5.aganitha.ai:8543/aganitha.jpg" alt="logo" class="logo">
+      </div>
+      <nav>
+        
+        <ul role="list" class="header_links">
+
+         <li>
+            <a href="/about/" >About</a>
+          </li>
+          <li>
+            <a href="/" >Patent Summary</a>
+          </li>
+          
+          <li>
+            <a href="/entity" >Entity Summary</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+      <hr class="custom-hr">
+  </div>
+</header>
+    <main>
+        
+<!-- Include ViewerJS library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+<div style="display: flex; height: 85vh; gap:3%;">
+
+    <!-- Left half containing PDF viewer -->
+    <div id="pdf-viewer-container" style="flex:1; height: 90%;">
+       <button id="fullscreen-btn"><i class="fas fa-expand-arrows-alt"></i></button>
+
+        <div id="pdf-viewer" class="pdfViewer" style=""></div>
+    </div>
+
+<!-- Right half containing patent details -->
+<div style="flex: 1;overflow: auto;margin:20px; margin-left:20px">
+    <ul style="padding: 0; margin: 0;">
+        <li style="font-size: 16px; ">
+    <a href="https://patents.google.com/patent/US20140128615A1/en" target="_blank" style="color: #8C1414;">US-2014128615-A1</a>
+</li>
+        <li style="font-size: 24px; color: #555; margin-top: 20px;">Preservation Of Ergothioneine </li>
+
+        <li style="margin-top: 20px;color:#03658C;font-size:18px;">Removers
+    <ul style="padding-left: 20px; margin-top: 10px;  ">
+        
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Acetic acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ascorbic acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Citric acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Formic acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Heptanoic acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Hexanoic acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Lactic acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Octanoic acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Oxalic acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Pentanoic acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Propanoic acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Uric acid</li>
+            
+        
+    </ul>
+</li>
+
+          <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Causers
+             <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">2-thiol-glyoxalines</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">2-thiolglyoxalines</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">800.501phenoxyethanol caprylyl glycol 1.00ethylhexylglycerin hexylene</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">acetic acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">acidh(c6h11o2)1.41e-5hydrocyanic</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">alkyl dimethicone</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">alkyl dimethicone copolyol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">alkyl siloxy</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">alkylene glycols</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">alkylene oxide</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">alkylene oxides</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">alpha hydroxy acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">alpha-hydroxy acids</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">arachidonic</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ascorbic acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">behenic acids</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">behenyl alcohol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">butyl isostearate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">butylene glycol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">butylene glycol phenoxyethanol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">c1-4 dihydric alcohols</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">c1-4 monohydric alcohols</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">c12-13alkyl citrate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">c12-22fatty acids</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">c2-4 alkylene glycols</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">c20-40 isoparaffins</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">c24-28 olefins</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">c6-30 fatty carboxylic acids</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">calcium bisulfate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">carboxylic acids</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">carboxylic ester</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">cetyl alcohol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">cetyl dimethicone</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">cetyl dimethicone copolyol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">cetyl palmitate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">citric acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">cyclopentasiloxane</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">cyclotetrasiloxane</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">decamathyltetrasiloxane</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">decamethyltetrasiloxane</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">dibutyl sebacate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">dicarboxylic acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">dicetyl adipate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">diisocetyl adipate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">diisononyl adipate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">diisostearyl fumarate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">diisotearyl</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">dimethicone</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">dimethicone </li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">dimethicone copolyol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">dimethicone polyglycerin</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">dioctyl malate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">diphenyl dimethicone</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">dipolyhydroxystearate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">dodecamethylpentasiloxane</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ergothioneine</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ethanol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ethylene</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ethylene glycol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ethylene oxide</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">fatty acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">fatty alcohol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">fructose</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">galactose</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">glucose</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">glycerin</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">glycerol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">glyceryl fatty acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">glycolic acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">gold</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">hexadecyl isostearate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">hexamethyldisiloxane</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">hexanediol capryl</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">hexyl laurate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">hydrocarbon</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">hydrocarbons</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">hydrocyanic acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">hydrofluoric acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">hydrogens</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">hydroxy-polyethyleneoxy radical</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">hydroxy-polypropyleneoxy</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">inositol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">isononyl isononanoate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">isopropanol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">isostearyl isononanoate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">isostearyl neopentanoate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">lactic</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">lauryl dimethicone</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">lauryl dimethicone copolyol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">magnesium</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">malic acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">maltitol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">maltose</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">mannitol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">mercury</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">methyl ether</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">methyl ether dimethicone</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">methyl glucose</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">methyl trimethicone</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">monocarboxylic acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">monoester</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">neopentyl glycol dioctanoate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">nitrous</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">octamethyltrisiloxane</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">organo-polysiloxanes</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">organosiloxane</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">oxalic acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">peg glyceryl oleates</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">peg glyceryl stearate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">pentahydrosqualene</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">pentanoic</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">pentylene glycol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">phenoxyethanol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">phenyl dimethicone</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">phenyl trimethicone</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">phosphoric</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">phosphoric acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">polydecene</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">polydimethylsiloxyethyl</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">polyethylene</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">polyethylene glycols</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">polyglyceryl-4 isostearate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">polyisobutene</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">polyorganosiloxane</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">polypropylene glycols</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium bisulfate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium metabisulfite</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">propanoic acids</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">propanol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">propyl ether</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">propylene glycol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">propylene oxide</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sesquiisostearate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sesquioleate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium bisulfate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium dioxide</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium hydroxide</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium metabisulfite</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium sulfite</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sorbitan palmitate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sorbitol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">squalene</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">stearate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">stearyl alcohol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">stearyl heptanoate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">stearyl lactate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">stearyl octanoate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">stearyl stearate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sucrose</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sugar acids</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sulfites</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sulfur dioxide</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sulfuric</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sulfuric acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sulfurous acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">tartaric acids</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">test</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">test2</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">triarachidin</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">tributyl citrate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">tricaprylin</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">tricaprylyl citrate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">tricarboxylic acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">tridecyl behenate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">tridecyl isononanoate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">triethylhexanoin</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">triisostearyl citrate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">trimethylamine</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">trimethylamine”</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">trimethylsiloxyphenyl dimethicone</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">trioctyldodecyl citrate</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">undecylenoyl phenylalanine</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">urea</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">uric acid</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">vitamin</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">vitamin a</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">vitamin e</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">water</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">xylitol</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">xylose</li>
+            
+        
+    </ul>
+        </li>
+        
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Context
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+    </ul>
+        </li>
+         
+         <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Substrate
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C;color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Polyether siloxane copolymer network</li>
+            
+        
+    </ul>
+        </li>
+        
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Efficacy
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Table 2</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Table 7 </li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Table 8</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Table 9</li>
+            
+        
+    </ul>
+        </li>
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">MOA
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Masking</li>
+            
+        
+    </ul>
+        </li>
+    </ul>
+</div>
+
+
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        // URL of the PDF file
+        const pdfUrl = `https://odor_api.demos.aganitha.ai/pdfs/US-2014128615-A1.pdf`;
+
+        // Check if the PDF viewer container exists
+        const pdfViewerContainer = document.getElementById('pdf-viewer-container');
+
+        if (pdfViewerContainer) {
+            // Create a new <embed> element for ViewerJS
+            const embedElement = document.createElement('embed');
+            embedElement.setAttribute('src', pdfUrl);
+            embedElement.setAttribute('type', 'application/pdf');
+            embedElement.setAttribute('width', '100%');
+            embedElement.setAttribute('height', '100%'); // Set initial height to 100%
+            embedElement.style.maxHeight = '100%'; // Ensure the maximum height is 100%
+            
+            // Append the <embed> element to the PDF viewer container
+            pdfViewerContainer.appendChild(embedElement);
+        } else {
+            console.error('PDF viewer container not found.');
+        }
+    });
+
+    // Full-screen button functionality
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+    fullscreenBtn.addEventListener('click', function() {
+        toggleFullScreen();
+    });
+
+    function toggleFullScreen() {
+        const elem = document.getElementById('pdf-viewer-container');
+        if (!document.fullscreenElement) {
+            elem.requestFullscreen().catch(err => {
+                console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+            });
+            fullscreenBtn.innerHTML = '<i class="fas fa-compress-alt"></i>'; // Update button text to "Exit Full Screen"
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+            fullscreenBtn.innerHTML = '<i class="fas fa-expand-arrows-alt"></i>';; // Update button text to "Toggle Full Screen"
+        }
+    }
+
+    // Listen for full-screen change events
+    document.addEventListener('fullscreenchange', function() {
+        const elem = document.getElementById('pdf-viewer-container');
+        if (document.fullscreenElement === elem || document.webkitFullscreenElement === elem) {
+            // If in full-screen mode, set container height to 100vh
+            elem.style.height = '100vh';
+        } else {
+            // If exiting full-screen mode, reset container height to auto
+            elem.style.height = 'auto';
+        }
+    });
+</script>
+
+    </main>
+  
+    <hr class="custom-hr">
+<Footer>
+        <p >
+          Copyright © 2017-2024
+          <a
+            
+            href="https://www.aganitha.ai"
+            target="_blank"
+          style="color:#3B82F6">
+            Aganitha AI Inc.
+          </a>
+          All rights reserved.
+        </p>
+      </Footer>
+</body>
+</html>

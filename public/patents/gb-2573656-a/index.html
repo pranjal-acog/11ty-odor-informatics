@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patent-detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <div>
+        <img src="https://odor-informatics.own5.aganitha.ai:8543/aganitha.jpg" alt="logo" class="logo">
+      </div>
+      <nav>
+        
+        <ul role="list" class="header_links">
+
+         <li>
+            <a href="/about/" >About</a>
+          </li>
+          <li>
+            <a href="/" >Patent Summary</a>
+          </li>
+          
+          <li>
+            <a href="/entity" >Entity Summary</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+      <hr class="custom-hr">
+  </div>
+</header>
+    <main>
+        
+<!-- Include ViewerJS library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+<div style="display: flex; height: 85vh; gap:3%;">
+
+    <!-- Left half containing PDF viewer -->
+    <div id="pdf-viewer-container" style="flex:1; height: 90%;">
+       <button id="fullscreen-btn"><i class="fas fa-expand-arrows-alt"></i></button>
+
+        <div id="pdf-viewer" class="pdfViewer" style=""></div>
+    </div>
+
+<!-- Right half containing patent details -->
+<div style="flex: 1;overflow: auto;margin:20px; margin-left:20px">
+    <ul style="padding: 0; margin: 0;">
+        <li style="font-size: 16px; ">
+    <a href="https://patents.google.com/patent/GB2573656A/en" target="_blank" style="color: #8C1414;">GB-2573656-A</a>
+</li>
+        <li style="font-size: 24px; color: #555; margin-top: 20px;">Use of compositions comprising a mixture of two or more cucurbiturils in a moist environment </li>
+
+        <li style="margin-top: 20px;color:#03658C;font-size:18px;">Removers
+    <ul style="padding-left: 20px; margin-top: 10px;  ">
+        
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">CB[5]</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">CB[6]</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">CB[7]</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">CB[8]</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">CB[n] (where n is an integer of 4 or 9-20)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Allyl amine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Methyl amine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ethyl amine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cyclobutyl amine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cyclopentyl amine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cyclohexyl amine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cycloheptyl amine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Isopropylamine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Butylamine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Dibutylamine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Dimethyl ethanolamine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Methyl ethanolamine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Diethyl ethanolamine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Diethylamine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Dipropyl amine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Diisopropylamine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Dimethyl acetamide</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ethyl methyl amine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ethyl propylamine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Trimethyl amine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Triethylamine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ethylene diamine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Propylene diamine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Tetramethylenediamine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ethylene imine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Morpholine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ethyl morpholine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Pyrrolidine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Methyl ethyl pyridine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Pyridine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Vinyl pyridine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Skatole</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Indole</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cadaverine</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Hydrogen sulphide</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Allyl disulphide</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ethyl isothiocyanate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ally isothiocyanate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Allyl mercaptan</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Allyl sulphide</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Diallyl sulphide</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Dimethyl disulphide</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Dimethyl trisulphide</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Diethyl sulphide</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Butyl sulphide</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Diethyl trisulfide</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ethyl methyl disulphide</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Phenyl sulphide</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ethyl mercaptan</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Amyl mercaptan</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Isoamyl mercaptan</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Butyl mercaptan</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Isobutyl mercaptan</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Dodecyl mercaptan</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Carbon disulphide</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Dimethyl trithiocarbonate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Thiophenol mercaptan</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sotolone</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Nor-sotolone</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Acetic acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Propionic acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Butyric acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Isovaleric acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">N-valeric acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">2-methylbutyric acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">3-methyl-2-hexenoic acid</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">3-methyl-3-hydroxy hexanoic acid.</li>
+            
+        
+    </ul>
+</li>
+
+          <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Causers
+             <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+    </ul>
+        </li>
+        
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Context
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">malodour in a moist environment</li>
+            
+        
+    </ul>
+        </li>
+         
+         <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Substrate
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C;color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">skin region or hair region</li>
+            
+        
+    </ul>
+        </li>
+        
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Efficacy
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+    </ul>
+        </li>
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">MOA
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Counteracting</li>
+            
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Masking</li>
+            
+        
+    </ul>
+        </li>
+    </ul>
+</div>
+
+
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        // URL of the PDF file
+        const pdfUrl = `https://odor_api.demos.aganitha.ai/pdfs/GB-2573656-A.pdf`;
+
+        // Check if the PDF viewer container exists
+        const pdfViewerContainer = document.getElementById('pdf-viewer-container');
+
+        if (pdfViewerContainer) {
+            // Create a new <embed> element for ViewerJS
+            const embedElement = document.createElement('embed');
+            embedElement.setAttribute('src', pdfUrl);
+            embedElement.setAttribute('type', 'application/pdf');
+            embedElement.setAttribute('width', '100%');
+            embedElement.setAttribute('height', '100%'); // Set initial height to 100%
+            embedElement.style.maxHeight = '100%'; // Ensure the maximum height is 100%
+            
+            // Append the <embed> element to the PDF viewer container
+            pdfViewerContainer.appendChild(embedElement);
+        } else {
+            console.error('PDF viewer container not found.');
+        }
+    });
+
+    // Full-screen button functionality
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+    fullscreenBtn.addEventListener('click', function() {
+        toggleFullScreen();
+    });
+
+    function toggleFullScreen() {
+        const elem = document.getElementById('pdf-viewer-container');
+        if (!document.fullscreenElement) {
+            elem.requestFullscreen().catch(err => {
+                console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+            });
+            fullscreenBtn.innerHTML = '<i class="fas fa-compress-alt"></i>'; // Update button text to "Exit Full Screen"
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+            fullscreenBtn.innerHTML = '<i class="fas fa-expand-arrows-alt"></i>';; // Update button text to "Toggle Full Screen"
+        }
+    }
+
+    // Listen for full-screen change events
+    document.addEventListener('fullscreenchange', function() {
+        const elem = document.getElementById('pdf-viewer-container');
+        if (document.fullscreenElement === elem || document.webkitFullscreenElement === elem) {
+            // If in full-screen mode, set container height to 100vh
+            elem.style.height = '100vh';
+        } else {
+            // If exiting full-screen mode, reset container height to auto
+            elem.style.height = 'auto';
+        }
+    });
+</script>
+
+    </main>
+  
+    <hr class="custom-hr">
+<Footer>
+        <p >
+          Copyright © 2017-2024
+          <a
+            
+            href="https://www.aganitha.ai"
+            target="_blank"
+          style="color:#3B82F6">
+            Aganitha AI Inc.
+          </a>
+          All rights reserved.
+        </p>
+      </Footer>
+</body>
+</html>

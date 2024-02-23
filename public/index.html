@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patent Summary</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <div>
+        <img src="https://odor-informatics.own5.aganitha.ai:8543/aganitha.jpg" alt="logo" class="logo">
+      </div>
+      <nav>
+        
+        <ul role="list" class="header_links">
+
+         <li>
+            <a href="/about/" >About</a>
+          </li>
+          <li>
+            <a href="/" >Patent Summary</a>
+          </li>
+          
+          <li>
+            <a href="/entity" >Entity Summary</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+      <hr class="custom-hr">
+  </div>
+</header>
+    <main>
+        
+<!-- Include AG-Grid CSS and JavaScript files -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@latest/dist/styles/ag-grid.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@latest/dist/styles/ag-theme-material.css">
+<script src="https://cdn.jsdelivr.net/npm/ag-grid-community@latest/dist/ag-grid-community.min.noStyle.js"></script>
+
+<main>
+    <!-- AG-Grid container with horizontal scrolling -->
+    <div style="width: 100%; overflow-x: auto; margin:40px; height: 70vh;">
+        <div id="grid" class="ag-theme-material" style="height: 100%;"></div>
+    </div>
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var gridOptions = {
+        columnDefs: [
+            { headerName: 'Patent ID', field: 'patent_id',pinned: "left", width: 250,cellRenderer: function(params) {
+        // Assuming params.value contains the patent ID
+        const patentId = params.value;
+        const currentUrl = window.location.href;
+        const url = `${currentUrl}patents/${patentId}/index.html`;
+        return `<a href="${url}" target="_blank" style="color:#3B82F6;">${patentId}</a>`;
+    } },
+            { headerName: 'Title', field: 'title', width: 600 },
+            { headerName: 'Odor Related', field: 'odor_related', width: 150 },
+            { headerName: 'Publication Date', field: 'publication_date', width: 200 },
+            { headerName: 'Relevance Total', field: 'relevance_total', width: 200 },
+            { headerName: 'CPC Code', field: 'cpc_code', width: 300 },
+            { headerName: 'Validated', field: 'validated', width: 200 },
+            { headerName: 'Assignee', field: 'assignee', width: 300 },
+            { headerName: 'Inventor', field: 'inventor', width: 300 },
+            // Add more column definitions as needed
+        ],
+         defaultColDef: {
+            sortable: true,
+            filter: true,
+            minWidth: 100,
+            resizable: true // Allow column resizing
+        },
+        rowData: [], // Data will be loaded dynamically later
+        pagination: true,
+        paginationPageSize: 50,
+        domLayout: 'autoHeight',
+        autoHeaderHeight:true ,
+        
+       
+    };
+
+    // Initialize AG-Grid
+    var gridDiv = document.querySelector('#grid');
+    new agGrid.Grid(gridDiv, gridOptions);
+
+    // Fetch data from data.json
+    fetch('/_data/patents.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            gridOptions.api.setRowData(data);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+});
+</script>
+    </main>
+  
+    <hr class="custom-hr">
+<Footer>
+        <p >
+          Copyright © 2017-2024
+          <a
+            
+            href="https://www.aganitha.ai"
+            target="_blank"
+          style="color:#3B82F6">
+            Aganitha AI Inc.
+          </a>
+          All rights reserved.
+        </p>
+      </Footer>
+</body>
+</html>

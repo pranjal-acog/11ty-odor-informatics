@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patent-detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <div>
+        <img src="https://odor-informatics.own5.aganitha.ai:8543/aganitha.jpg" alt="logo" class="logo">
+      </div>
+      <nav>
+        
+        <ul role="list" class="header_links">
+
+         <li>
+            <a href="/about/" >About</a>
+          </li>
+          <li>
+            <a href="/" >Patent Summary</a>
+          </li>
+          
+          <li>
+            <a href="/entity" >Entity Summary</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+      <hr class="custom-hr">
+  </div>
+</header>
+    <main>
+        
+<!-- Include ViewerJS library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+<div style="display: flex; height: 85vh; gap:3%;">
+
+    <!-- Left half containing PDF viewer -->
+    <div id="pdf-viewer-container" style="flex:1; height: 90%;">
+       <button id="fullscreen-btn"><i class="fas fa-expand-arrows-alt"></i></button>
+
+        <div id="pdf-viewer" class="pdfViewer" style=""></div>
+    </div>
+
+<!-- Right half containing patent details -->
+<div style="flex: 1;overflow: auto;margin:20px; margin-left:20px">
+    <ul style="padding: 0; margin: 0;">
+        <li style="font-size: 16px; ">
+    <a href="https://patents.google.com/patent/AU2010332420B2/en" target="_blank" style="color: #8C1414;">AU-2010332420-B2</a>
+</li>
+        <li style="font-size: 24px; color: #555; margin-top: 20px;">Personal care composition providing quietness and softness enhancement and articles using the same </li>
+
+        <li style="margin-top: 20px;color:#03658C;font-size:18px;">Removers
+    <ul style="padding-left: 20px; margin-top: 10px;  ">
+        
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium palmate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium sweet almondate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium grapeseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium cocoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium ricinoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium soyate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium palm kernelate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium castorate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium sweet almondate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium sunflowerate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium caprylate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium grapeseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium oleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium hydrogenated cocoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium tallowate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium hydrogenated cocoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium caprate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium palmate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium hydrogenated palmate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium lanolate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium castorate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium grapeseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium behenate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium caprate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium rapeseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium peanutate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium caprylate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium palmitate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium hydrogenated tallowate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium passiflora edulis seedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium hydrogenated tallowate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium cocoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium mangoseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium linoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium undecylenate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium passiflora edulis seedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium dilinoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium soyate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium passiflora edulis seedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium laurate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium babassuate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium tallowate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium sweet almondate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium palmate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium cocoa butterate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium behenate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium cocoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium avocadoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium oryzarate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium lardate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium tsubakiate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium linoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium macadamiaseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium castorate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium stearate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium hydrogenated palmate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium myristate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium safflowerate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium undecylenate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium macadamiaseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium avocadoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium olivate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium caprylate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium jojobate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium rapeseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium avocadoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium hydrogenated palmate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium caprylate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium jojobate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium behenate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium palmitate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium lardate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium lardate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium olivate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium rapeseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium cocoa butterate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium undecylenate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium myristate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium mangoseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium tsubakiate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium babassuate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium myristate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium oryzarate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium tallate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium soyate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium shea butterate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium babassuate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium oleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium canoloate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium hempseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium cocoa butterate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium safflowerate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium olivate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium cocoa butterate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium tallowate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium caprate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium sunflowerate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium canoloate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium tallate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium laurate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium canoloate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium shea butterrate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium oleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium caprylate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium hydrogenated palmate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium dilinoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium jojobate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium palm kernelate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium safflowerate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium peanutate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium palm kernelate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium soyate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium castorate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium linoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium lardate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium macadamiaseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium rapeseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium dilinoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium hydrogenated tallowate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium stearate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium soyate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium shea butterate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium oleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium cocoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium safflowerate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium palm kernelate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium palmate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium behenate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium cocoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium sweet almondate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium laurate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium hydrogenated tallowate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium avocadoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium oleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium hempseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium tsubakiate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium myristate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium hydrogenated palmate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium peanutate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium passiflora edulis seedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium tallate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium lardate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium laurate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium ricinoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium macadamiaseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium tsubakiate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium tallowate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium ricinoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium jojobate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium palmitate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium palmitate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium babassuate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium cocoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium rapeseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium myristate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium stearate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium tamanuseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium tsubakiate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium rapeseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium myristate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium laurate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium lanolate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium palm kernelate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium oryzarate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium caprate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium palmitate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium undecylenate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium tallate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium dilinoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium sunflowerate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium linoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium mangoseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium olivate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium babassuate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium avocadoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium hempseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium oryzarate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium jojobate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium macadamiaseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium hempseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium ricinoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium stearate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium oryzarate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium peanutate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium soyate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium hempseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium palmate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium safflowerate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium cocoa butterate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium hydrogenated cocoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium behenate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium tamanuseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium canoloate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium lardate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium passiflora edulis seedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium sunflowerate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium linoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium hydrogenated cocoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium palm kernelate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium hempseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium castorate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium oleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium mangoseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium cocoa butterate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium hydrogenated tallowate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium grapeseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium canoloate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium olivate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium caprate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium sweet almondate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium caprate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium tamanuseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium linoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium canoloate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium tsubakiate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium babassuate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium ricinoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium tallate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium undecylenate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium shea butterate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium behenate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium lanolate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium sunflowerate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium laurate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium tamanuseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium olivate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium caprylate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium grapeseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium hydrogenated cocoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium shea butterate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium castorate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium avocadoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium hydrogenated cocoate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium palmitate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium palmate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium stearate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium macadamiaseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium tamanuseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium grapeseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium mangoseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium tamanuseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium peanutate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium shea butterrate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium safflowerate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium stearate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium oryzarate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium dilinoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium sunflowerate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium tallate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium lanolate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium tallowate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">potassium tallowate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium lanolate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sodium hydrogenated tallowate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium hydrogenated palmate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium dilinoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium mangoseedate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ammonium peanutate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium undecylenate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium jojobate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium lanolate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">sodium ricinoleate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">ammonium sweet almondate</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Potassium passiflora edulis seedate</li>
+            
+        
+    </ul>
+</li>
+
+          <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Causers
+             <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+    </ul>
+        </li>
+        
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Context
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">skin</li>
+            
+        
+    </ul>
+        </li>
+         
+         <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Substrate
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C;color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">skin</li>
+            
+        
+    </ul>
+        </li>
+        
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Efficacy
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+    </ul>
+        </li>
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">MOA
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+    </ul>
+        </li>
+    </ul>
+</div>
+
+
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        // URL of the PDF file
+        const pdfUrl = `https://odor_api.demos.aganitha.ai/pdfs/AU-2010332420-B2.pdf`;
+
+        // Check if the PDF viewer container exists
+        const pdfViewerContainer = document.getElementById('pdf-viewer-container');
+
+        if (pdfViewerContainer) {
+            // Create a new <embed> element for ViewerJS
+            const embedElement = document.createElement('embed');
+            embedElement.setAttribute('src', pdfUrl);
+            embedElement.setAttribute('type', 'application/pdf');
+            embedElement.setAttribute('width', '100%');
+            embedElement.setAttribute('height', '100%'); // Set initial height to 100%
+            embedElement.style.maxHeight = '100%'; // Ensure the maximum height is 100%
+            
+            // Append the <embed> element to the PDF viewer container
+            pdfViewerContainer.appendChild(embedElement);
+        } else {
+            console.error('PDF viewer container not found.');
+        }
+    });
+
+    // Full-screen button functionality
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+    fullscreenBtn.addEventListener('click', function() {
+        toggleFullScreen();
+    });
+
+    function toggleFullScreen() {
+        const elem = document.getElementById('pdf-viewer-container');
+        if (!document.fullscreenElement) {
+            elem.requestFullscreen().catch(err => {
+                console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+            });
+            fullscreenBtn.innerHTML = '<i class="fas fa-compress-alt"></i>'; // Update button text to "Exit Full Screen"
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+            fullscreenBtn.innerHTML = '<i class="fas fa-expand-arrows-alt"></i>';; // Update button text to "Toggle Full Screen"
+        }
+    }
+
+    // Listen for full-screen change events
+    document.addEventListener('fullscreenchange', function() {
+        const elem = document.getElementById('pdf-viewer-container');
+        if (document.fullscreenElement === elem || document.webkitFullscreenElement === elem) {
+            // If in full-screen mode, set container height to 100vh
+            elem.style.height = '100vh';
+        } else {
+            // If exiting full-screen mode, reset container height to auto
+            elem.style.height = 'auto';
+        }
+    });
+</script>
+
+    </main>
+  
+    <hr class="custom-hr">
+<Footer>
+        <p >
+          Copyright © 2017-2024
+          <a
+            
+            href="https://www.aganitha.ai"
+            target="_blank"
+          style="color:#3B82F6">
+            Aganitha AI Inc.
+          </a>
+          All rights reserved.
+        </p>
+      </Footer>
+</body>
+</html>

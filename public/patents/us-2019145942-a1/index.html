@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patent-detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <div>
+        <img src="https://odor-informatics.own5.aganitha.ai:8543/aganitha.jpg" alt="logo" class="logo">
+      </div>
+      <nav>
+        
+        <ul role="list" class="header_links">
+
+         <li>
+            <a href="/about/" >About</a>
+          </li>
+          <li>
+            <a href="/" >Patent Summary</a>
+          </li>
+          
+          <li>
+            <a href="/entity" >Entity Summary</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+      <hr class="custom-hr">
+  </div>
+</header>
+    <main>
+        
+<!-- Include ViewerJS library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+<div style="display: flex; height: 85vh; gap:3%;">
+
+    <!-- Left half containing PDF viewer -->
+    <div id="pdf-viewer-container" style="flex:1; height: 90%;">
+       <button id="fullscreen-btn"><i class="fas fa-expand-arrows-alt"></i></button>
+
+        <div id="pdf-viewer" class="pdfViewer" style=""></div>
+    </div>
+
+<!-- Right half containing patent details -->
+<div style="flex: 1;overflow: auto;margin:20px; margin-left:20px">
+    <ul style="padding: 0; margin: 0;">
+        <li style="font-size: 16px; ">
+    <a href="https://patents.google.com/patent/US20190145942A1/en" target="_blank" style="color: #8C1414;">US-2019145942-A1</a>
+</li>
+        <li style="font-size: 24px; color: #555; margin-top: 20px;">Improvements in or Relating to Organic Compounds </li>
+
+        <li style="margin-top: 20px;color:#03658C;font-size:18px;">Removers
+    <ul style="padding-left: 20px; margin-top: 10px;  ">
+        
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Acetyl Cedrene (main isomer) (32388-55-9)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Alpha Isomethylionone (127-51-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Amyl Cinnamic Alcohol (E) (101-85-9)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Amyl Cinnamic Aldehyde (E) (122-40-7)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Amyl Salicylate (ISO-) (87-20-7)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Amyl Salicylate (N-) (2050-08-0)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Anethole Trans (E) (4180-23-8)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Anisyl Alcohol (105-13-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Benzaldehyde (100-52-7)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Benzyl Alcohol (100-51-6)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Benzyl Benzoate (120-51-4)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Benzyl Cinnamate (E) (103-41-3)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Benzyl Cyanide (140-29-4)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Benzyl Salicylate (118-58-1)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Camphor (76-22-2)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Carvone (99-49-0)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Caryophyllene Beta (87-44-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cinnamic Alcohol (E) (104-54-1)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Cinnamic Aldehyde (E) (104-55-2)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Citronellol (106-22-9)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Coumarin (91-64-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Hydroxyisohexyl 3-cyclohexene carboxaldehyde (Cyclohexal / Lyral major) (31906-04-4)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Hydroxyisohexyl 3-cyclohexene carboxaldehyde (Cyclohexal / Lyral minor) (51414-25-6)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Damascenone Beta (23696-85-7)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Damascone Alpha (E) (24720-09-0)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Damascone Alpha (Z) (23726-94-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Damascone Beta (E) (23726-91-2)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Damascone Beta (Z) (23726-92-3)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Damascone Delta cis/trans (71048-83-4)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Damascone Delta trans/cis (n/a)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Damascone Delta trans/trans (71048-82-3)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Di Iso-Butyl Phthalate (84-69-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Di isopentyl phthalate (605-50-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Di Isopropyl Phthalate (605-45-8)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Di n-Butyl Phthalate (84-74-2)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Di n-pentyl phthalate (131-18-0)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Dicyclohexyl phthalate (84-61-7)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Diethyl Hexyl Phthalate (117-81-7)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Diethyl Phthalate (84-66-2)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Dimethyl Phthalate (131-11-3)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Dimethyl Benzyl Carbinyl Acetate (151-05-3)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ebanol 1 (67801-20-1)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Ebanol 2 (67801-20-1)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Estragol (140-67-0)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Eugenol (97-53-0)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Eugenyl acetate (93-28-7)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Farnesol (E)(E) (106-28-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Farnesol (Z)(E) (3790-71-4)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Farnesol (E)(Z) (3879-60-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Farnesol (Z)(Z) (16106-95-9)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Galaxolide (Cis) (252933-49-6)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Galaxolide (Trans) (252933-48-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Geranial (141-27-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Geraniol (106-24-1)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Geranyl Acetate (105-87-3)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Hexadecanolide (109-29-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Hexyl Cinnamic Aldehyde (E) (101-86-0)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Hydroxycitronellal (107-75-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Iso E Super Alpha (68155-66-8)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Iso E Super Beta (54464-57-2)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Iso E Super Gamma (68155-67-9)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Iso E Super minor (54464-59-4)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Isoeugenol (E) (5932-68-3)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Isoeugenol (Z) (5912-86-7)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Isoeugenyl Acetate (93-29-8)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Lilial (80-54-6)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Limonene (5989-27-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Linalool (78-70-6)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Linalyl Acetate (115-95-7)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Majantol (103694-68-4)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Menthol (1490-04-6)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Methoxycoumarin-7 (531-59-9)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Methyl Eugenol (93-15-2)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Methyl Heptine Carbonate (111-12-6)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Methyl Octine Carbonate (111-80-8)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Methyl Salicylate (119-36-8)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Neral (106-26-3)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">n-pentyl isopentyl phthalate (84777-06-0)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Phenyl Acetaldehyde (122-78-1)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Pinene Alpha (80-56-8)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Pinene Beta (127-91-3)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Propylidene Phthalide 3- (E) (56014-72-3)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Propylidene Phthalide 3- (Z) (94704-89-9)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Salicylaldehyde (90-02-8)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Santalol Alpha (115-71-9)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Santalol Beta (77-42-9)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Sclareol (515-03-7)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Terpinene Alpha (99-86-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Terpineol Alpha (98-55-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Terpineol Beta cis (7299-41-4)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Terpineol Beta trans (7299-40-3)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Terpineol Delta (7299-42-5)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Terpineol Gamma (586-81-2)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: white; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Terpinolene (586-62-9)</li>
+            
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">Vanillin (121-33-5)</li>
+            
+        
+    </ul>
+</li>
+
+          <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Causers
+             <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+    </ul>
+        </li>
+        
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Context
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+            <li style="font-size: 16px;border-left: 2px solid #03658C; color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">fragrance ingredients</li>
+            
+        
+    </ul>
+        </li>
+         
+         <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Substrate
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+            <li style="font-size: 16px; border-left: 2px solid #03658C;color: #333; background-color: #f0f8ff; list-style-type: none; padding: 10px; border-radius: 5px; margin-bottom: 5px;">skin</li>
+            
+        
+    </ul>
+        </li>
+        
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">Efficacy
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+    </ul>
+        </li>
+        <li style="margin-top: 20px;color:#03658C;font-size: 18px;">MOA
+            <ul style="padding-left: 20px; margin-top: 10px;">
+        
+        
+    </ul>
+        </li>
+    </ul>
+</div>
+
+
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        // URL of the PDF file
+        const pdfUrl = `https://odor_api.demos.aganitha.ai/pdfs/US-2019145942-A1.pdf`;
+
+        // Check if the PDF viewer container exists
+        const pdfViewerContainer = document.getElementById('pdf-viewer-container');
+
+        if (pdfViewerContainer) {
+            // Create a new <embed> element for ViewerJS
+            const embedElement = document.createElement('embed');
+            embedElement.setAttribute('src', pdfUrl);
+            embedElement.setAttribute('type', 'application/pdf');
+            embedElement.setAttribute('width', '100%');
+            embedElement.setAttribute('height', '100%'); // Set initial height to 100%
+            embedElement.style.maxHeight = '100%'; // Ensure the maximum height is 100%
+            
+            // Append the <embed> element to the PDF viewer container
+            pdfViewerContainer.appendChild(embedElement);
+        } else {
+            console.error('PDF viewer container not found.');
+        }
+    });
+
+    // Full-screen button functionality
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+    fullscreenBtn.addEventListener('click', function() {
+        toggleFullScreen();
+    });
+
+    function toggleFullScreen() {
+        const elem = document.getElementById('pdf-viewer-container');
+        if (!document.fullscreenElement) {
+            elem.requestFullscreen().catch(err => {
+                console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+            });
+            fullscreenBtn.innerHTML = '<i class="fas fa-compress-alt"></i>'; // Update button text to "Exit Full Screen"
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+            fullscreenBtn.innerHTML = '<i class="fas fa-expand-arrows-alt"></i>';; // Update button text to "Toggle Full Screen"
+        }
+    }
+
+    // Listen for full-screen change events
+    document.addEventListener('fullscreenchange', function() {
+        const elem = document.getElementById('pdf-viewer-container');
+        if (document.fullscreenElement === elem || document.webkitFullscreenElement === elem) {
+            // If in full-screen mode, set container height to 100vh
+            elem.style.height = '100vh';
+        } else {
+            // If exiting full-screen mode, reset container height to auto
+            elem.style.height = 'auto';
+        }
+    });
+</script>
+
+    </main>
+  
+    <hr class="custom-hr">
+<Footer>
+        <p >
+          Copyright © 2017-2024
+          <a
+            
+            href="https://www.aganitha.ai"
+            target="_blank"
+          style="color:#3B82F6">
+            Aganitha AI Inc.
+          </a>
+          All rights reserved.
+        </p>
+      </Footer>
+</body>
+</html>
